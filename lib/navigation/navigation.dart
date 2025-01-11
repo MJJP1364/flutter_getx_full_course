@@ -6,6 +6,20 @@ class GetNavigation extends StatelessWidget {
   const GetNavigation({super.key});
 
   @override
+  /// Builds the main application widget.
+  ///
+  /// Returns a [GetMaterialApp] that sets up the navigation
+  /// and routes for the application. The app has an initial
+  /// route of '/', and includes pages for the main screen
+  /// and the next screen. It also includes a [Scaffold] with
+  /// an [AppBar] and a [Center] containing a [Column] of
+  /// [ElevatedButton]s to navigate between screens using
+  /// GetX navigation methods such as [Get.to], [Get.off],
+  /// [Get.toNamed], and [Get.offNamed].
+  /// 
+  /// The navigation transitions are animated with a
+  /// right-to-left slide and an ease-in-out curve.
+
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Get Navigation',
