@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:get/get.dart';
 
+import '../state_management/reactive_state_management.dart';
+
 class GetNavigation extends StatelessWidget {
   const GetNavigation({super.key});
 
   @override
+
   /// Builds the main application widget.
   ///
   /// Returns a [GetMaterialApp] that sets up the navigation
@@ -16,7 +19,7 @@ class GetNavigation extends StatelessWidget {
   /// [ElevatedButton]s to navigate between screens using
   /// GetX navigation methods such as [Get.to], [Get.off],
   /// [Get.toNamed], and [Get.offNamed].
-  /// 
+  ///
   /// The navigation transitions are animated with a
   /// right-to-left slide and an ease-in-out curve.
 
@@ -27,6 +30,7 @@ class GetNavigation extends StatelessWidget {
       getPages: [
         GetPage(name: '/', page: () => const GetNavigation()),
         GetPage(name: '/next', page: () => const NextScreen()),
+        GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
       ],
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -81,6 +85,20 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Get.offNamed(/next)'),
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/reactive',
+                  );
+                },
+                child: const Text('Reactive State Management'),
               ),
             ],
           ),
