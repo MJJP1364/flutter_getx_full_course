@@ -30,20 +30,21 @@ class ReactiveStateManagement extends StatelessWidget {
   final item = <String>[].obs;
   final myMap = <String, int>{}.obs;
   final number = 0.0.obs;
-  // final user = User(name: 'javad', age: 39).obs;
+  final user = User(name: 'javad', age: 39).obs;
 
-  final user = User();
+  // final User user = User();
 
   void increment() => count.value++;
 
   void toUpper() {
-    user.name.value = user.name.value.toUpperCase();
-    user.age.value++;
+    // user.name.value = user.name.value.toUpperCase();
+    // user.age.value++;
 
-    // user.update((user) {
-    //   user!.name = user.name.toUpperCase();
-    //   user.age = user.age + 1;
-    // });
+    user.update((user) {
+      user!.name = user.name.toUpperCase();
+      user.age = user.age + 1;
+    });
+    // user(User(name: 'javad', age: 39));
   }
 
   @override
@@ -72,7 +73,8 @@ class ReactiveStateManagement extends StatelessWidget {
             const SizedBox(height: 30),
             Obx(
               () => Text(
-                'Name : ${user.name} \n Age : ${user.age}',
+                // 'Name : ${user.name} \n Age : ${user.age}',
+                'Name : ${user.value.name} \n Age : ${user().age}',
                 style: const TextStyle(fontSize: 30),
                 textAlign: TextAlign.center,
               ),

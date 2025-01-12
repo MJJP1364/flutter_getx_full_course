@@ -3,6 +3,7 @@ import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:get/get.dart';
 
 import '../state_management/reactive_state_management.dart';
+import '../state_management/simple_state_management.dart';
 
 class GetNavigation extends StatelessWidget {
   const GetNavigation({super.key});
@@ -31,6 +32,7 @@ class GetNavigation extends StatelessWidget {
         GetPage(name: '/', page: () => const GetNavigation()),
         GetPage(name: '/next', page: () => const NextScreen()),
         GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
+        GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
       ],
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -99,6 +101,14 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Reactive State Management'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/simple',
+                  );
+                },
+                child: const Text('Simple State Management'),
               ),
             ],
           ),
