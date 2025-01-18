@@ -60,7 +60,8 @@ class ReactiveStateManagement extends StatelessWidget {
             Obx(
               () => Text(
                 'Count : ${count.value}',
-                style: const TextStyle(fontSize: 30),                
+                style: const TextStyle(fontSize: 30),  
+                              
               ),
             ),
             const SizedBox(height: 30),
