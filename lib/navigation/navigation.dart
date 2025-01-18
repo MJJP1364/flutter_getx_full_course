@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:get/get.dart';
 
@@ -33,6 +34,7 @@ class GetNavigation extends StatelessWidget {
         GetPage(name: '/next', page: () => const NextScreen()),
         GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
         GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
+        GetPage(name: '/getx', page: () => const GetxControllerExzmple()),
       ],
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -109,6 +111,14 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Simple State Management'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/getx',
+                  );
+                },
+                child: const Text('GetX Controller Example'),
               ),
             ],
           ),
