@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_full_course/getx_controller/detail_page.dart';
 import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:get/get.dart';
-
 import '../state_management/reactive_state_management.dart';
 import '../state_management/simple_state_management.dart';
 
@@ -34,7 +34,8 @@ class GetNavigation extends StatelessWidget {
         GetPage(name: '/next', page: () => const NextScreen()),
         GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
         GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
-        GetPage(name: '/getx', page: () => const GetxControllerExzmple()),
+        GetPage(name: '/getx', page: () => GetxExzmple()),
+        GetPage(name: '/detail', page: () => DetailPage()),
       ],
       debugShowCheckedModeBanner: false,
       home: Scaffold(
