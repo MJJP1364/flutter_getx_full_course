@@ -22,13 +22,13 @@ List<GetPage> routes = [
 
 //---------- Bindings-------------------------------------------------------
 //--------------------------------------------------------------------------
-      ///****** binding 1 way
+      ///****** binding 1 way come from DetailsBinding class 
       binding: DetailsBinding()
 
 
 //--------------------------------------------------------------------------
 
-      ///****** binding 2 way
+      ///****** binding 2 way 
       // binding: BindingsBuilder(
       // () {
       ///*******1 method1 */

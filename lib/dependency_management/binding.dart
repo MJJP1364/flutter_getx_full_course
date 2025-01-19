@@ -11,13 +11,13 @@ class DetailsBinding implements Bindings {
     //  Get.put(DependencyController());
 
     ///*******2 method2 */
-    Get.lazyPut<DependencyController>(() => DependencyController());
+    // Get.lazyPut<DependencyController>(() => DependencyController());
 
     ///******* 3 method3 */
-    // Get.lazyPut<DependencyController>(
-    //   () => DependencyController(),
-    //   fenix: true,
-    // );
+    Get.lazyPut<DependencyController>(
+      () => DependencyController(),
+      fenix: true,
+    );
 
     ///******* 4 method4 */
     // Get.putAsync<AsyncTask>(
