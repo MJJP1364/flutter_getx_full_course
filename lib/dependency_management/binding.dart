@@ -2,7 +2,7 @@ import 'package:flutter_getx_full_course/dependency_management/controller.dart';
 // import 'package:flutter_getx_full_course/getx_controller/controller.dart';
 import 'package:get/get.dart';
 
-class DetailsBinding implements Bindings {
+class AllBinding implements Bindings {
   @override
   void dependencies() {
     // controller 1 ---------------------------------------
@@ -14,10 +14,10 @@ class DetailsBinding implements Bindings {
     // Get.lazyPut<DependencyController>(() => DependencyController());
 
     ///******* 3 method3 */
-    Get.lazyPut<DependencyController>(
-      () => DependencyController(),
-      fenix: true,
-    );
+    // Get.lazyPut<DependencyController>(
+    //   () => DependencyController(),
+    //   fenix: true,
+    // );
 
     ///******* 4 method4 */
     // Get.putAsync<AsyncTask>(
@@ -29,12 +29,10 @@ class DetailsBinding implements Bindings {
     // );
 
     ///******* 5 method5 */
-    // Get.create<DependencyController>(
-    //   () => DependencyController(),
-    //   permanent: true,
-    // );
-    // },
-    // ),
+    Get.create<DependencyController>(
+      () => DependencyController(),
+      permanent: true,
+    );
 
 // other controller -------------------------------------
     // Get.lazyPut(

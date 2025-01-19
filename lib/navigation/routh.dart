@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/dependency_management/binding.dart';
 // import 'package:flutter_getx_full_course/dependency_management/controller.dart';
 import 'package:flutter_getx_full_course/dependency_management/view.dart';
@@ -19,16 +20,19 @@ List<GetPage> routes = [
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 2),
+      curve: Curves.fastOutSlowIn,
+      
 
 //---------- Bindings-------------------------------------------------------
 //--------------------------------------------------------------------------
-      ///****** binding 1 way come from DetailsBinding class 
-      binding: DetailsBinding()
-
+      ///****** binding 1 way come from DetailsBinding class
+      binding: AllBinding()
 
 //--------------------------------------------------------------------------
 
-      ///****** binding 2 way 
+      ///****** binding 2 way
       // binding: BindingsBuilder(
       // () {
       ///*******1 method1 */
