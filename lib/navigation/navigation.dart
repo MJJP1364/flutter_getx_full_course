@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_full_course/dependency_management/controller.dart';
 import 'package:flutter_getx_full_course/getx_controller/detail_page.dart';
 import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:get/get.dart';
+import '../dependency_management/view.dart';
 import '../state_management/reactive_state_management.dart';
 import '../state_management/simple_state_management.dart';
 
@@ -36,6 +38,18 @@ class GetNavigation extends StatelessWidget {
         GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
         GetPage(name: '/getx', page: () => GetxExzmple()),
         GetPage(name: '/detail', page: () => DetailPage()),
+        GetPage(
+          name: '/dependency',
+          page: () => DependencyView(),
+          binding: BindingsBuilder(
+            () {
+              Get.lazyPut<DependencyController>(
+                () => DependencyController(),
+                fenix: true,
+              );
+            },
+          ),
+        ),
       ],
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -120,6 +134,20 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('GetX Controller Example'),
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/dependency',
+                  );
+                },
+                child: const Text('Dependency Management'),
               ),
             ],
           ),
