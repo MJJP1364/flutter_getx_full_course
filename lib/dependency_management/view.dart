@@ -5,7 +5,12 @@ import 'package:get/get.dart';
 class DependencyView extends StatelessWidget {
   DependencyView({super.key});
 
-  final dependencyController = Get.find<DependencyController>();
+
+  ///********* 1 way for get.find */
+  // final dependencyController = Get.find<DependencyController>();
+
+  ///********* 2 way for get.find  */
+  final DependencyController dependencyController = Get.find();
 
   // final dependencyController = Get.put(DependencyController());
   // final getxControllerExzmple = Get.put(
