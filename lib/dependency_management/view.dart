@@ -3,7 +3,9 @@ import 'package:flutter_getx_full_course/dependency_management/controller.dart';
 import 'package:get/get.dart';
 
 class DependencyView extends StatelessWidget {
-  const DependencyView({super.key});
+  DependencyView({super.key});
+
+  final dependencyController = Get.find<DependencyController>();
 
   // final dependencyController = Get.put(DependencyController());
   // final getxControllerExzmple = Get.put(
@@ -25,7 +27,7 @@ class DependencyView extends StatelessWidget {
             children: [
               Obx(
                 () => Text(
-                  '${Get.find<DependencyController>().count.value}',
+                  '${dependencyController.count.value}',
                   style: const TextStyle(fontSize: 30),
                 ),
               ),
@@ -41,7 +43,7 @@ class DependencyView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // dependencyController.increment();
-          Get.find<DependencyController>().increment();
+          dependencyController.increment();
           // Get.find<GetxControllerExzmple>(tag: 'uniqueId').increment();
         },
         tooltip: 'Increment',

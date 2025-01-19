@@ -15,10 +15,14 @@ List<GetPage> routes = [
   GetPage(name: '/detail', page: () => DetailPage()),
   GetPage(
     name: '/dependency',
-    page: () => const DependencyView(),
-    binding: BindingsBuilder(() {
-      Get.lazyPut<DependencyController>(() => DependencyController()); 
-      
-    })
+    page: () => DependencyView(),
+    binding: BindingsBuilder(
+      () {
+        Get.lazyPut<DependencyController>(
+          () => DependencyController(),
+          fenix: true,
+        );
+      },
+    ),
   ),
 ];
