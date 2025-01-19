@@ -28,7 +28,7 @@ class GetNavigation extends StatelessWidget {
       getPages: routes,
       debugShowCheckedModeBanner: false,
 
-      //---------------------------------------------------
+      //-------Translation --------------------------------------------
 
       translations: Messages(),
       // locale: const Locale('en', 'US'),
@@ -36,7 +36,7 @@ class GetNavigation extends StatelessWidget {
 
       fallbackLocale: const Locale('fa', 'IR'),
 
-      //---------------------------------------------------
+      //--------------------------------------------------------------
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Get Navigation'),
