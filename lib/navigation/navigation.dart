@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:flutter_getx_full_course/navigation/routh.dart';
+import 'package:flutter_getx_full_course/translations/messages.dart';
 import 'package:get/get.dart';
-
 
 class GetNavigation extends StatelessWidget {
   const GetNavigation({super.key});
-
-
 
   /// Builds the main application widget.
   ///
@@ -28,9 +26,17 @@ class GetNavigation extends StatelessWidget {
       title: 'Get Navigation',
       initialRoute: '/',
       getPages: routes,
-       
-      
       debugShowCheckedModeBanner: false,
+
+      //---------------------------------------------------
+
+      translations: Messages(),
+      // locale: const Locale('en', 'US'),
+      locale: Get.deviceLocale,
+
+      fallbackLocale: const Locale('fa', 'IR'),
+
+      //---------------------------------------------------
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Get Navigation'),
@@ -127,6 +133,20 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Dependency Management'),
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/transition',
+                  );
+                },
+                child: const Text('Transition Example'),
               ),
             ],
           ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/dependency_management/binding.dart';
-// import 'package:flutter_getx_full_course/dependency_management/controller.dart';
 import 'package:flutter_getx_full_course/dependency_management/view.dart';
 import 'package:flutter_getx_full_course/getx_controller/detail_page.dart';
 import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:flutter_getx_full_course/state_management/reactive_state_management.dart';
 import 'package:flutter_getx_full_course/state_management/simple_state_management.dart';
+import 'package:flutter_getx_full_course/translations/translation_view.dart';
 import 'package:get/get.dart';
 
 // import '../dependency_management/class.dart';
@@ -17,13 +17,13 @@ List<GetPage> routes = [
   GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
   GetPage(name: '/getx', page: () => GetxExzmple()),
   GetPage(name: '/detail', page: () => DetailPage()),
+  GetPage(name: '/transition', page: () => TranslationExample()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 2),
       curve: Curves.fastOutSlowIn,
-      
 
 //---------- Bindings-------------------------------------------------------
 //--------------------------------------------------------------------------
