@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_full_course/dependency_management/controller.dart';
-import 'package:flutter_getx_full_course/getx_controller/detail_page.dart';
-import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
+import 'package:flutter_getx_full_course/navigation/routh.dart';
 import 'package:get/get.dart';
-import '../dependency_management/view.dart';
-import '../state_management/reactive_state_management.dart';
-import '../state_management/simple_state_management.dart';
+
 
 class GetNavigation extends StatelessWidget {
   const GetNavigation({super.key});
 
-  @override
+
 
   /// Builds the main application widget.
   ///
@@ -26,31 +22,14 @@ class GetNavigation extends StatelessWidget {
   ///
   /// The navigation transitions are animated with a
   /// right-to-left slide and an ease-in-out curve.
-
+  @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Get Navigation',
       initialRoute: '/',
-      getPages: [
-        GetPage(name: '/', page: () => const GetNavigation()),
-        GetPage(name: '/next', page: () => const NextScreen()),
-        GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
-        GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
-        GetPage(name: '/getx', page: () => GetxExzmple()),
-        GetPage(name: '/detail', page: () => DetailPage()),
-        GetPage(
-          name: '/dependency',
-          page: () => DependencyView(),
-          binding: BindingsBuilder(
-            () {
-              Get.lazyPut<DependencyController>(
-                () => DependencyController(),
-                fenix: true,
-              );
-            },
-          ),
-        ),
-      ],
+      getPages: routes,
+       
+      
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(

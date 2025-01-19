@@ -7,11 +7,11 @@ class DependencyView extends StatelessWidget {
   DependencyView({super.key});
 
   final dependencyController = Get.put(DependencyController());
-  // final getxControllerExzmple = Get.put(
-  //   GetxControllerExzmple(),
-  //   tag: 'uniqueId',
-  //   // permanent: true,
-  // );
+  final getxControllerExzmple = Get.put(
+    GetxControllerExzmple(),
+    tag: 'uniqueId',
+    permanent: true,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -31,12 +31,10 @@ class DependencyView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              Obx(
-                () => Text(
-                  '${Get.find<GetxControllerExzmple>(tag: 'uniqueId').count.value}',
-                  style: const TextStyle(fontSize: 30),
-                ),
-              ),
+              Obx(() => Text(
+                    '${Get.find<GetxControllerExzmple>(tag: 'uniqueId').count.value}',
+                    style: const TextStyle(fontSize: 30),
+                  ))
             ],
           ),
         ),
