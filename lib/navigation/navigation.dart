@@ -29,11 +29,13 @@ class GetNavigation extends StatelessWidget {
       initialRoute: '/',
       getPages: routes,
       debugShowCheckedModeBanner: false,
+      
 
       // -------------------Theme -----------------------------------
       themeMode: ThemeController().theme,
       theme: Themes.lightThemes,
       darkTheme: Themes.darkThemes,
+      
 
       //-------Translation --------------------------------------------
 

@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 class ThemeExample extends StatelessWidget {
   ThemeExample({super.key});
 
-  final themeController = Get.find<ThemeController>();
+  final themeController = Get.put(ThemeController());
 
   @override
   Widget build(BuildContext context) {
