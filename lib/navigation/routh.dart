@@ -22,8 +22,7 @@ List<GetPage> routes = [
       name: '/transition',
       page: () => TranslationExample(),
       binding: AllBinding()),
-  GetPage(
-      name: '/Theme', page: () => const ThemeExample(), binding: AllBinding()),
+  GetPage(name: '/Theme', page: () => ThemeExample(), binding: AllBinding()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),

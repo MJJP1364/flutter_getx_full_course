@@ -36,8 +36,9 @@ class AllBinding implements Bindings {
 
 // Theme controller -------------------------------------
 
-    Get.lazyPut<MessageController>(() => MessageController());
-
     Get.lazyPut<ThemeController>(() => ThemeController());
+
+    // Translation controller -------------------------------------
+    Get.lazyPut<MessageController>(() => MessageController());
   }
 }
