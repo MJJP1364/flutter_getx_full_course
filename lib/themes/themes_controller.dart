@@ -12,7 +12,14 @@ class ThemeController extends GetxController {
 
   void saveTheme(bool isDarkMode) => _box.write(_key, isDarkMode);
 
-  void changeTheme(ThemeData theme) => Get.changeTheme(theme);
+  void changeTheme(ThemeData theme) {
+    Get.changeTheme(theme);
+    debugPrint(theme.toString());
+    update();
+  }
 
-  void changeThemeMode(ThemeMode themeMode) => Get.changeThemeMode(themeMode);
+  void changeThemeMode(ThemeMode themeMode) {
+    Get.changeThemeMode(themeMode);
+    update();
+  }
 }

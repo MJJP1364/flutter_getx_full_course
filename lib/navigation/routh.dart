@@ -18,8 +18,11 @@ List<GetPage> routes = [
   GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
   GetPage(name: '/getx', page: () => GetxExzmple()),
   GetPage(name: '/detail', page: () => DetailPage()),
-  GetPage(name: '/transition', page: () => TranslationExample()),
-  GetPage(name: '/Theme', page: () => ThemeExample()),
+  GetPage(
+      name: '/transition',
+      page: () => TranslationExample(),
+      binding: AllBinding()),
+  GetPage(name: '/Theme', page: () => ThemeExample(), binding: AllBinding()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),

@@ -29,13 +29,11 @@ class GetNavigation extends StatelessWidget {
       initialRoute: '/',
       getPages: routes,
       debugShowCheckedModeBanner: false,
-      
 
       // -------------------Theme -----------------------------------
       themeMode: ThemeController().theme,
       theme: Themes.lightThemes,
       darkTheme: Themes.darkThemes,
-      
 
       //-------Translation --------------------------------------------
 
@@ -43,7 +41,7 @@ class GetNavigation extends StatelessWidget {
       // locale: const Locale('en', 'US'),
       locale: Get.deviceLocale,
 
-      fallbackLocale: const Locale('fa', 'IR'),
+      fallbackLocale: const Locale('en', 'US'),
 
       //--------------------------------------------------------------
       home: Scaffold(

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class TranslationExample extends StatelessWidget {
   TranslationExample({super.key});
 
-  final messageController = Get.put(MessageController());
+  final messageController = Get.find<MessageController>();
 
   @override
   Widget build(BuildContext context) {

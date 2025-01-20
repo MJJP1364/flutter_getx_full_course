@@ -1,4 +1,7 @@
+// import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/dependency_management/controller.dart';
+import 'package:flutter_getx_full_course/themes/themes_controller.dart';
+import 'package:flutter_getx_full_course/translations/translation_controller.dart';
 // import 'package:flutter_getx_full_course/getx_controller/controller.dart';
 import 'package:get/get.dart';
 
@@ -29,15 +32,12 @@ class AllBinding implements Bindings {
     // );
 
     ///******* 5 method5 */
-    Get.create<DependencyController>(
-      () => DependencyController(),
-      permanent: true,
-    );
+    Get.lazyPut<DependencyController>(() => DependencyController());
 
-// other controller -------------------------------------
-    // Get.lazyPut(
-    //   () => GetxControllerExzmple(),
-    //   fenix: true
-    // );
+// Theme controller -------------------------------------
+
+    Get.lazyPut<MessageController>(() => MessageController());
+
+    Get.lazyPut<ThemeController>(() => ThemeController());
   }
 }
