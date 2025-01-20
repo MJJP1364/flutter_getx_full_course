@@ -20,7 +20,6 @@ class ThemeController extends GetxController {
 
   void changeThemeMode(ThemeMode themeMode) {
     Get.changeThemeMode(themeMode);
-    print('$_box.read(_key).toString()');
     update();
   }
 }
