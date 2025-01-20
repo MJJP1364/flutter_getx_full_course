@@ -6,6 +6,7 @@ import 'package:flutter_getx_full_course/getx_controller/view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:flutter_getx_full_course/state_management/reactive_state_management.dart';
 import 'package:flutter_getx_full_course/state_management/simple_state_management.dart';
+import 'package:flutter_getx_full_course/themes/themes_view.dart';
 import 'package:flutter_getx_full_course/translations/translation_view.dart';
 import 'package:get/get.dart';
 
@@ -18,6 +19,7 @@ List<GetPage> routes = [
   GetPage(name: '/getx', page: () => GetxExzmple()),
   GetPage(name: '/detail', page: () => DetailPage()),
   GetPage(name: '/transition', page: () => TranslationExample()),
+  GetPage(name: '/Theme', page: () => ThemeExample()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),
