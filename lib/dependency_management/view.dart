@@ -46,7 +46,6 @@ class DependencyView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // dependencyController.increment();
           dependencyController.increment();
           // Get.find<GetxControllerExzmple>(tag: 'uniqueId').increment();
         },

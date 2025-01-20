@@ -24,7 +24,7 @@ class GetNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Get Navigation',
-      initialRoute: '/',
+      // initialRoute: '/',
       getPages: routes,
       debugShowCheckedModeBanner: false,
 
@@ -34,7 +34,7 @@ class GetNavigation extends StatelessWidget {
       // locale: const Locale('en', 'US'),
       locale: Get.deviceLocale,
 
-      fallbackLocale: const Locale('fa', 'IR'),
+      fallbackLocale: const Locale('en', 'US'),
 
       //--------------------------------------------------------------
       home: Scaffold(
