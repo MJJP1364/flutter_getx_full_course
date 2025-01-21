@@ -33,6 +33,8 @@ class AllBinding implements Bindings {
     // );
 
     ///******* 5 method5 */
+    // Create a new instance of DependencyController when using Get.find()----------------
+    //------------------------------------------------------------------------------------
     // Get.create<DependencyController>(
     //   () => DependencyController(),
     //   permanent: true,
