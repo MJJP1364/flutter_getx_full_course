@@ -1,5 +1,6 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/dependency_management/controller.dart';
+import 'package:flutter_getx_full_course/getx_service/setting_service.dart';
 import 'package:flutter_getx_full_course/themes/themes_controller.dart';
 import 'package:flutter_getx_full_course/translations/translation_controller.dart';
 // import 'package:flutter_getx_full_course/getx_controller/controller.dart';
@@ -41,6 +42,7 @@ class AllBinding implements Bindings {
     // Translation controller -------------------------------------
     Get.lazyPut<MessageController>(() => MessageController());
 
-
+    // Getx Service controller -------------------------------------
+    Get.lazyPut<SettingService>(() => SettingService());
   }
 }
