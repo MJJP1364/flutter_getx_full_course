@@ -3,6 +3,7 @@ import 'package:flutter_getx_full_course/dependency_management/binding.dart';
 import 'package:flutter_getx_full_course/dependency_management/view.dart';
 import 'package:flutter_getx_full_course/getx_controller/detail_page.dart';
 import 'package:flutter_getx_full_course/getx_controller/view.dart';
+import 'package:flutter_getx_full_course/getx_service/service_view.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:flutter_getx_full_course/state_management/reactive_state_management.dart';
 import 'package:flutter_getx_full_course/state_management/simple_state_management.dart';
@@ -23,6 +24,10 @@ List<GetPage> routes = [
       page: () => TranslationExample(),
       binding: AllBinding()),
   GetPage(name: '/Theme', page: () => ThemeExample(), binding: AllBinding()),
+  GetPage(
+      name: '/service',
+      page: () => const ServiceExample(),
+      binding: AllBinding()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),

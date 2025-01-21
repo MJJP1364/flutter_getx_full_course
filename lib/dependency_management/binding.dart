@@ -40,5 +40,7 @@ class AllBinding implements Bindings {
 
     // Translation controller -------------------------------------
     Get.lazyPut<MessageController>(() => MessageController());
+
+
   }
 }

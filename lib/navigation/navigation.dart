@@ -168,7 +168,21 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Change Theme'),
-              )
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/service',
+                  );
+                },
+                child: const Text('Service Example'),
+              ),
             ],
           ),
         ),
