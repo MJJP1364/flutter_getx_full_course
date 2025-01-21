@@ -33,9 +33,15 @@ class AllBinding implements Bindings {
     // );
 
     ///******* 5 method5 */
+    // Get.create<DependencyController>(
+    //   () => DependencyController(),
+    //   permanent: true,
+    // );
+
+    // Dependency controller -------------------------------------
     Get.lazyPut<DependencyController>(() => DependencyController());
 
-// Theme controller -------------------------------------
+    // Theme controller -------------------------------------
 
     Get.lazyPut<ThemeController>(() => ThemeController());
 
