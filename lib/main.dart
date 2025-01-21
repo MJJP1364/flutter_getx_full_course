@@ -1,12 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_getx_full_course/navigation/navigation.dart';
+import 'package:flutter_getx_full_course/navigation/navigation.dart' as perfix;
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+import 'getx_service/setting_service.dart';
+
+Future<void> main() async {
+  await GetStorage.init();
+
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServices();
+
   runApp(const MyApp());
+}
+
+Future<void> initServices() async {
+  debugPrint('Starting Services ...');
+  await Get.putAsync(() => SettingService().init());
+  debugPrint('Services Started');
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +29,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetNavigation();
+    return const perfix.GetNavigation();
   }
 }

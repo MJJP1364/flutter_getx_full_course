@@ -18,4 +18,6 @@ class MessageController extends GetxController {
     var locale = Locale(langCode, countryCode);
     Get.updateLocale(locale);
   }
+  
+
 }

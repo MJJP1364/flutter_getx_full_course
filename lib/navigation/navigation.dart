@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_full_course/navigation/next_screen.dart';
 import 'package:flutter_getx_full_course/navigation/routh.dart';
+import 'package:flutter_getx_full_course/themes/themes.dart';
+import 'package:flutter_getx_full_course/themes/themes_controller.dart';
 import 'package:flutter_getx_full_course/translations/messages.dart';
 import 'package:get/get.dart';
 
@@ -27,6 +29,11 @@ class GetNavigation extends StatelessWidget {
       // initialRoute: '/',
       getPages: routes,
       debugShowCheckedModeBanner: false,
+
+      // -------------------Theme -----------------------------------
+      themeMode: ThemeController().theme,
+      theme: Themes.lightThemes,
+      darkTheme: Themes.darkThemes,
 
       //-------Translation --------------------------------------------
 
@@ -147,6 +154,34 @@ class GetNavigation extends StatelessWidget {
                   );
                 },
                 child: const Text('Transition Example'),
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/Theme',
+                  );
+                },
+                child: const Text('Change Theme'),
+              ),
+              const Divider(
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Colors.black,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(
+                    '/service',
+                  );
+                },
+                child: const Text('Service Example'),
               ),
             ],
           ),
