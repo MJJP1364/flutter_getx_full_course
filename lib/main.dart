@@ -12,6 +12,8 @@ Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
+
+  // init Getx_services
   await SettingService.initServices();
 
   runApp(const MyApp());
