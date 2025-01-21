@@ -6,12 +6,12 @@ import 'package:get_storage/get_storage.dart';
 import 'getx_service/setting_service.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
-  WidgetsFlutterBinding.ensureInitialized();
   await SettingService.initServices();
 
   runApp(const MyApp());
