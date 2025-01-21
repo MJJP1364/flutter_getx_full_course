@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_full_course/themes/themes.dart';
 import 'package:flutter_getx_full_course/themes/themes_controller.dart';
 import 'package:get/get.dart';
 
