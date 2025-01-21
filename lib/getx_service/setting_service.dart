@@ -18,9 +18,17 @@ class SettingService extends GetxService {
     counter2.value = (_prefs2.getInt('counter2') ?? 0);
 
     // also have getBool , getDouble , getString , getStringList
-
     return this;
   }
+
+  static Future<void> initServices() async {
+  debugPrint('Starting Services ...');
+  await Get.putAsync(() => SettingService().init());
+  debugPrint('Services Started');
+}
+
+
+
 
   Future<void> incrementCounter1() async {
     counter.value++;
