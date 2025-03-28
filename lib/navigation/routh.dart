@@ -25,14 +25,15 @@ List<GetPage> routes = [
       binding: AllBinding()),
   GetPage(name: '/Theme', page: () => ThemeExample(), binding: AllBinding()),
   GetPage(
-      name: '/service', page: () => const ServiceExample(), binding: AllBinding()),
+      name: '/service',
+      page: () => const ServiceExample(),
+      binding: AllBinding()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 2),
       curve: Curves.fastOutSlowIn,
-
 //---------- Bindings-------------------------------------------------------
 //--------------------------------------------------------------------------
       ///****** binding 1 way come from DetailsBinding class
