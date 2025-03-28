@@ -5,6 +5,7 @@ class NextScreen extends StatelessWidget {
   const NextScreen({super.key});
 
   @override
+
   /// The screen that is pushed when the user presses the button on the home
   /// screen.
   ///
@@ -26,7 +27,6 @@ class NextScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           
             Text('Arguments : ${Get.arguments[0]} '),
             Text('Arguments : ${Get.arguments[1]} '),
             Text('Parameters : ${Get.parameters['id']} '),
@@ -40,6 +40,14 @@ class NextScreen extends StatelessWidget {
                 debugPrint('Go Back');
               },
               child: const Text('Go Back'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.offNamed(
+                  '/',
+                );
+              },
+              child: const Text('Get.toNamed(Route)'),
             ),
           ],
         ),
