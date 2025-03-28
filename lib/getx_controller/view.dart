@@ -3,8 +3,8 @@ import 'package:flutter_getx_full_course/getx_controller/controller.dart';
 
 import 'package:get/get.dart';
 
-class GetxExzmple extends StatelessWidget {
-   GetxExzmple({super.key});
+class GetxExample extends StatelessWidget {
+   GetxExample({super.key});
 
     final obxController = Get.put(GetxControllerExzmple());
   @override

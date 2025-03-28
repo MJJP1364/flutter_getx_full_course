@@ -17,7 +17,7 @@ List<GetPage> routes = [
   GetPage(name: '/next', page: () => const NextScreen()),
   GetPage(name: '/reactive', page: () => ReactiveStateManagement()),
   GetPage(name: '/simple', page: () => const SimpleStateMamagement()),
-  GetPage(name: '/getx', page: () => GetxExzmple()),
+  GetPage(name: '/getx', page: () => GetxExample()),
   GetPage(name: '/detail', page: () => DetailPage()),
   GetPage(
       name: '/transition',
