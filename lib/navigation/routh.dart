@@ -25,7 +25,7 @@ List<GetPage> routes = [
       binding: AllBinding()),
   GetPage(name: '/Theme', page: () => ThemeExample(), binding: AllBinding()),
   GetPage(
-      name: '/service', page: () => ServiceExample(), binding: AllBinding()),
+      name: '/service', page: () => const ServiceExample(), binding: AllBinding()),
   GetPage(
       name: '/dependency',
       page: () => DependencyView(),
