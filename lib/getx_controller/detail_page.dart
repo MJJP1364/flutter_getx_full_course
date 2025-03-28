@@ -16,12 +16,13 @@ class DetailPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GetBuilder<GetxControllerExample>(
-              id: 'count1',
-              builder: (controller) => Text(
-                'Count with GetBuilder : ${controller.counter}',
-                style: const TextStyle(fontSize: 30),
-              ),
-            ),
+                id: 'count1',
+                builder: (controller) {
+                  return Text(
+                    'Count with GetBuilder : ${controller.counter}',
+                    style: const TextStyle(fontSize: 30),
+                  );
+                }),
           ],
         ),
       ),
