@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class DetailPage extends StatelessWidget {
   DetailPage({super.key});
-  final controller = Get.put(GetxControllerExzmple());
+  final controller = Get.put(GetxControllerExample());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class DetailPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<GetxControllerExzmple>(
+            GetBuilder<GetxControllerExample>(
               id: 'count1',
               builder: (controller) => Text(
                 'Count with GetBuilder : ${controller.counter}',

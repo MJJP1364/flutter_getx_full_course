@@ -4,9 +4,9 @@ import 'package:flutter_getx_full_course/getx_controller/controller.dart';
 import 'package:get/get.dart';
 
 class GetxExample extends StatelessWidget {
-   GetxExample({super.key});
+  GetxExample({super.key});
 
-    final obxController = Get.put(GetxControllerExzmple());
+  final obxController = Get.put(GetxControllerExample());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,8 +17,8 @@ class GetxExample extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetX<GetxControllerExzmple>(
-              init: GetxControllerExzmple(),
+            GetX<GetxControllerExample>(
+              init: GetxControllerExample(),
               builder: (controller) => Text(
                 'Count with GetX : ${controller.count.value}',
                 style: const TextStyle(fontSize: 30),
@@ -32,15 +32,15 @@ class GetxExample extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            GetBuilder<GetxControllerExzmple>(
-              init: GetxControllerExzmple(),
+            GetBuilder<GetxControllerExample>(
+              init: GetxControllerExample(),
               builder: (controller) => Text(
                 'Count with GetBuilder : ${controller.counter}',
                 style: const TextStyle(fontSize: 30),
               ),
             ),
             const SizedBox(height: 30),
-            GetBuilder<GetxControllerExzmple>(
+            GetBuilder<GetxControllerExample>(
               id: 'count1',
               builder: (controller) => Text(
                 'Count with GetBuilder with id : ${controller.counter}',
@@ -48,7 +48,7 @@ class GetxExample extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            GetBuilder<GetxControllerExzmple>(
+            GetBuilder<GetxControllerExample>(
               id: 'count2',
               builder: (controller) => Text(
                 'Count with GetBuilder with id <10: ${controller.counter}',
@@ -64,7 +64,7 @@ class GetxExample extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Get.find<GetxControllerExzmple>().increment(),
+        onPressed: () => Get.find<GetxControllerExample>().increment(),
         child: const Icon(Icons.add),
       ),
     );
