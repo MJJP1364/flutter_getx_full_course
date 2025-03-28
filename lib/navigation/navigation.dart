@@ -74,7 +74,7 @@ class GetNavigation extends StatelessWidget {
                       duration: const Duration(seconds: 1),
                       curve: Curves.easeInOut,
                       // https://api.flutter.dev/flutter/animation/Curves-class.html
-                      arguments: 'hello world from Get.to()',
+                      arguments: ['hello world from Get.to()'],
                     );
                   },
                   child: const Text('Get.off(NextScreen)')),
